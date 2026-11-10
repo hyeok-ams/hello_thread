@@ -28,8 +28,9 @@ class NumberWorker1 extends Thread{
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// 에러 발생시 처리내용
+				System.out.println("숫자 중단");
+				return;
 			}
 		}
 	}
@@ -39,12 +40,13 @@ class NumberWorker1 extends Thread{
 class TextWorker extends Thread{
 	public void run() {
 		for (int j = 0; j < 5; j++) {
-			System.out.println("문자 : " + j + "백");
+			System.out.println("문자 : 안녕하세요 " + j);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				// 에러 발생시 처리내용
+				System.out.println("문자 중단");
+				return;
 			}
 		}
 	}
